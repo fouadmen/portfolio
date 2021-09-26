@@ -1,0 +1,167 @@
+.section {
+    color: $white;
+    
+    &:not(:first-of-type) {
+        padding: toRem(32) 0;
+    }
+
+    &.hero {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            margin-top: toRem(24);
+        }
+
+        h1 {
+            font-size: $font-xlg;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: $tint;
+        }
+    }
+
+    h2 {
+        font-size: $font-xlg;
+    }
+
+    .subtitle {
+        margin-top: toRem(16);
+    }
+
+    h3 {
+        margin: toRem(16) 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        li {
+            &:not(:last-child){
+                margin-bottom: toRem(16);
+            }
+            h4 {
+                color: $tint;
+                margin-bottom: toRem(16);
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: toRem(16) 0;
+        
+        :not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+
+        > input[type="text"], textarea {
+            height: toRem(56);
+            background-color: $background;
+            color: $white;
+            padding-left: toRem(16);
+        }
+
+        textarea {
+            height: toRem(200);
+            padding-top: toRem(16);
+            resize: none;
+        }
+
+        input[type="submit"] {
+            border: solid 1px $tint;
+            height: toRem(56);
+            width: toRem(128);
+            margin: 0 auto;
+            text-align: center;
+            color: $tint;
+        }
+    }
+
+
+    @include breakpoint-up(medium){
+        
+        &:not(:first-of-type) {
+            padding: toRem(40) 0;
+        }
+
+        &.hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            * {
+                margin-top: toRem(24);
+            }
+    
+            h1 {
+                font-size: $font-xxxlg;
+            }
+
+            h2 {
+                font-weight: 400;
+                color: $tint;
+                font-size: $font-lg;
+            }
+        }
+
+        h2 {
+            font-size: $font-xxlg;
+        }
+
+        .subtitle {
+            margin-top: toRem(16);
+        }
+
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                &:not(:last-child){
+                    margin-bottom: toRem(16);
+                }
+                h4 {
+                    color: $tint;
+                    margin-bottom: toRem(16);
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: toRem(16) 0;
+            
+            :not(:last-child) {
+                margin-bottom: toRem(16);
+            }
+    
+            > input {
+                &#name{
+                    margin-right: 2%;
+                }
+                &#name, &#email {
+                    width: 49%;
+                } 
+                
+                &#subject {
+                    width: 100%;
+                } 
+            }
+    
+            textarea {
+                width: 100%;
+            }
+        }
+    
+    }
+}
