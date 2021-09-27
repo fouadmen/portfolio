@@ -142,6 +142,54 @@
         }
     }
 
+    &__works {
+        > p, div{
+            margin-top: toRem(16);
+        }
+
+        .works__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: toRem(16);
+            margin-top: toRem(86);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            .project_snapshot {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 5%;
+                transform: translateY(-40%);
+            }
+
+            &__content_wrapper {
+                margin-top: -25%;
+                .project_title {
+                    color: $tint;
+                }
+
+                .project_description {
+                    line-height: 1.5;
+                    margin-bottom: toRem(16);
+                }
+    
+                .tech_stack{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    color: $tint;
+                    :not(:last-child) {
+                        margin-right: toRem(8);
+                        margin-bottom: toRem(4);
+                    }
+                    :not(:last-child)::after {
+                        content: "●";
+                        padding-left: toRem(4);
+                    }
+                }
+            }
+        }
+
+    }
 
     @include breakpoint-up(medium){
         
@@ -261,6 +309,31 @@
                     }
                 }
             }
+        }
+
+        &__works {    
+            .works__item {
+                display: flex;
+                flex-direction: row;
+                padding: toRem(16);
+                margin-top: toRem(24);
+
+                .project_snapshot {
+                    width: 40%;
+                    border-radius: 5%;
+                    transform: translateX(-10%);
+                }
+    
+                &__content_wrapper {
+                    width: 80%;
+                    margin-top: 0;
+                    .project_description {
+                        line-height: 1.5;
+                        margin-bottom: toRem(16);
+                    }
+                }
+            }
+    
         }
     
     }

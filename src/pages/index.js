@@ -59,7 +59,7 @@ const IndexPage = () => {
 
       {/* experiences */}
       <section className="section section__experiences" id="experience">
-        <h2>fm<span className="highlight">.experience()</span></h2>
+        <h2>fm<span className="highlight">.experiences()</span></h2>
         <div className="expriences__wrapper">
           <div className="tab">
               {
@@ -77,6 +77,39 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="section section__works" id="works">
+        <h2>fm<span className="highlight">.works("<span className="parameter">Latest</span>")</span></h2>
+        <p className="comment">// Projects I have been working on recently</p>
+        {/* <div className="works__wrapper">
+          
+        </div> */}
+        <div className="works__item">
+          <img className="project_snapshot" src="https://unsplash.com/photos/pxax5WuM7eY/download?force=true&w=640"  alt="lesthy"/>
+          <div className="works__item__content_wrapper">
+            <h3 className="project_title">Lesthy</h3>
+            <p className="project_description">
+              Lesthy is a platform which will take beauty services in Morocco to a whole new level.
+              Lesthy allows clients and salon owners to seamlessly book and orginize their reservations. 
+            </p>
+            <ul className="tech_stack">
+              <li>React Native</li>
+              <li>React</li>
+              <li>NodeJS</li>
+              <li>Typescript</li>
+              <li>Postgresql</li>
+              <li>Redis</li>
+              <li>Docker</li>
+              <li>EC2</li>
+            </ul>
+            <div className="links">
+              <a className="link external_link" href="#" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* about */}
 
       <section className="section" id="about">

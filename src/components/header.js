@@ -19,7 +19,8 @@ function Header() {
           </a>
           <div className={`header__links ${open ? "open" : ""}`}>
             <a href="#is">.is()</a>
-            <a href="#experience">.experience()</a>
+            <a href="#experience">.experiences()</a>
+            <a href="#works">.works()</a>
             <a href="#about">.about()</a>
             <a href="#contact">.contact()</a>
           </div>
