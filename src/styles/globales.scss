@@ -95,8 +95,13 @@ a:hover {
 .highlight {
     color: $tint;
 }
+
 .highlight:hover {
     color: $tint-hover;
+}
+
+.parameter {
+    color: $white;
 }
 
 .comment {
