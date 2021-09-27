@@ -37,7 +37,7 @@
         margin: toRem(16) 0;
     }
 
-    ul {
+    .skills {
         display: flex;
         flex-direction: column;
         li {
@@ -47,6 +47,10 @@
             h4 {
                 color: $tint;
                 margin-bottom: toRem(16);
+            }
+
+            h4:hover {
+                color: $tint-hover;
             }
         }
     }
@@ -81,6 +85,53 @@
             margin: 0 auto;
             text-align: center;
             color: $tint;
+        }
+
+        input[type="submit"]:hover {
+            color: $tint-hover;
+            border: solid 1px $tint-hover;
+        }
+    }
+    
+    &__experiences {
+        .expriences__wrapper {
+            .tab {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: toRem(48);
+                max-width: 100vw;
+                overflow: scroll;
+                margin-top: toRem(16);
+                &__item {
+                    padding: toRem(8) toRem(16);
+                    height: 100%;
+                    white-space: nowrap;
+                    transition: all 300ms ease-in-out;
+                    cursor: pointer;
+                    &__active {
+                        background-color: $light-background;
+                        border-bottom: solid toRem(4) $comment;
+                    }
+                }
+            }
+    
+            .experience {
+                display: flex;
+                flex-direction: column;
+    
+                :not(:last-child) {
+                    margin-bottom: toRem(16);
+                }
+    
+                h3 {
+                    color: $white;
+                }
+    
+                .period {
+                    color: $comment;
+                }
+            }
         }
     }
 
@@ -120,7 +171,7 @@
             margin-top: toRem(16);
         }
 
-        ul {
+        .skills {
             flex-direction: row;
             flex-wrap: wrap;
             li {
@@ -160,6 +211,48 @@
     
             textarea {
                 width: 100%;
+            }
+        }
+
+        &__experiences {
+            .expriences__wrapper {
+                display: flex;
+                flex-direction: row;
+                min-height: toRem(320);
+                .tab {
+                    width: auto;
+                    height: auto;
+                    flex-direction: column;
+                    flex-shrink: 0;
+                    align-items: flex-start;
+                    &__item {
+                        padding: toRem(16) toRem(16);
+                        border-left: solid toRem(4) $background;
+                        height: toRem(56);
+                        &__active {
+                            background-color: $light-background;
+                            border-left: solid toRem(4) $comment;
+                            border-bottom: none;
+                        }
+                    }
+                }
+        
+                .experience {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: toRem(16);
+                    :not(:last-child) {
+                        margin-bottom: toRem(16);
+                    }
+        
+                    h3 {
+                        color: $white;
+                    }
+        
+                    .period {
+                        color: $comment;
+                    }
+                }
             }
         }
     

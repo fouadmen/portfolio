@@ -3,6 +3,48 @@ import "../styles/styles.scss"
 import Header from '../components/header'
 
 const IndexPage = () => {
+  const data = [
+    {
+      id:"dwdw343d33dx3",
+      company : "Funkycorp Ltd",
+      position:"Fullstack Engineer",
+      period : "April 2020 - Present",
+      tasks : [
+        "Improved governmental tourism websites loading speed by an average of 20% by leveraging browser and server caching, optimizing staticfiles and boosting Django server response times.",
+        "Integrated UI designs and constructed solid websites utilizing HTML, CSS, VueJs, and Django within an agile development team, and in close collaboration with designers.",
+        "Designed and developed backend automated solutions for CMS operations.",
+        "Successfully migrated multiple projects from Ansible to Dockerized structure."
+      ]
+    },
+    {
+      id:"d866w3438673dx3",
+      company : "Passiv Energy Japan",
+      position:"Software Engineer Intern",
+      period : "Septembre 2019 - February 2020",
+      tasks : [
+        "Developed the whole real time and event based system architecture from scratch for air conditioning passive controller.",
+        "Developed a mobile application to control and monitor the air condition in React Native, as well as designing and developing RESTful API with NodeJS on the backend and data modelling.",
+        "Optimized ESP32 firmware."
+      ]
+    },
+    {
+      id:"dwvvhjk88733dx3",
+      company : "IBITEK France",
+      position:"Software Engineer Intern",
+      period : "February 2018 - August 2018 | February 2019 - July 2019",
+      tasks : [
+        "Contributed to the development of Sales Management Software's backend and frontend in ASP .Net.",
+        "Contributed to the development and deployment of a “Technical Documents” management software.",
+        "Meeting with clients for future deployments and to define their needs.",
+        "Deployed the software solutions on the clients' factories in France, Morocco and Algeria."
+      ]
+    }
+  ]
+
+  const companies = data.map(d =>( {id: d.id, company:  d.company}))
+
+  const [currentCompany, setcurrentCompany] = React.useState(0)
+
   return (
     <main className="container">
       <title>Home Page</title>
@@ -16,17 +58,35 @@ const IndexPage = () => {
       </section>
 
       {/* experiences */}
-
+      <section className="section section__experiences" id="experience">
+        <h2>fm<span className="highlight">.experience()</span></h2>
+        <div className="expriences__wrapper">
+          <div className="tab">
+              {
+                companies.map((c, k)=>(<div onClick={()=>setcurrentCompany(k)} className={`tab__item ${k===currentCompany ? "tab__item__active" : ""}`}>{c.company}</div>))
+              }
+          </div>
+          <div className="experience">
+            <h3 className="company_name">{data[currentCompany].position} <span className="highlight">@ {data[currentCompany].company}</span></h3>
+            <p className="period">{data[currentCompany].period}</p>
+            <ul className="tasks">
+              {
+                data[currentCompany].tasks.map((t)=>(<li>{t}</li>))
+              }
+            </ul>
+          </div>
+        </div>
+      </section>
       {/* about */}
 
       <section className="section" id="about">
         <h2>fm<span className="highlight">.about()</span></h2>
         <p className="subtitle">I am a passionate Full-Stack Web & Mobile Developer.</p>
-        <p className="subtitle">From Morocco and living in beautiful Tokyo.</p>
+        <p className="subtitle">From Morocco 🇲🇦 and living in beautiful Tokyo 🇯🇵.</p>
         <h3>Main skills and tools</h3>
-        <ul>
+        <ul className="skills">
           <li>
-            <h4>Frontend Development</h4>
+            <h4 className="skils__category">Frontend Development</h4>
             <p>Javascript, CSS, SCSS, Tailwindcss, HTML,React, React Native, Next Js, Vue Js, Nuxt Js, Webpack</p>
           </li>
           <li>

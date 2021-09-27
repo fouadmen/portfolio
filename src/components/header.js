@@ -18,10 +18,10 @@ function Header() {
             <span></span>
           </a>
           <div className={`header__links ${open ? "open" : ""}`}>
-            <a href="#">.is()</a>
-            <a href="#">.experience()</a>
-            <a href="#">.about()</a>
-            <a href="#">.contact()</a>
+            <a href="#is">.is()</a>
+            <a href="#experience">.experience()</a>
+            <a href="#about">.about()</a>
+            <a href="#contact">.contact()</a>
           </div>
         </nav>
       </header>
