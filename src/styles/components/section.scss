@@ -1,6 +1,7 @@
 .section {
     color: $white;
-    
+    max-width: toRem(900);
+    margin: 0 auto;
     &:not(:first-of-type) {
         padding: toRem(32) 0;
     }
@@ -192,7 +193,7 @@
     }
 
     @include breakpoint-up(medium){
-        
+        max-width: 74%; 
         &:not(:first-of-type) {
             padding: toRem(40) 0;
         }
@@ -315,11 +316,11 @@
             .works__item {
                 display: flex;
                 flex-direction: row;
-                padding: toRem(16);
+                padding: toRem(32) toRem(16);
                 margin-top: toRem(24);
 
                 .project_snapshot {
-                    width: 40%;
+                    width: 50%;
                     border-radius: 5%;
                     transform: translateX(-10%);
                 }

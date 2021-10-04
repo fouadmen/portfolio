@@ -1,6 +1,7 @@
 .header {
     padding: toRem(24) 0;
-
+    max-width: toRem(900);
+    margin: 0 auto;
     &__logo {
         z-index: 100;
         font-size: toRem(20);
@@ -89,5 +90,6 @@
 
     @include breakpoint-up(medium){
         padding: toRem(24) 0;
+        max-width: 90%; 
     }
 }
