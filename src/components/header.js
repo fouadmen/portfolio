@@ -2,10 +2,19 @@ import React from 'react'
 
 function Header() {
     const [open, setopen] = React.useState(false)
-
+    const sections = ["is", "experiences","works","about","contact"]
+    
     const menuBtnClick = (e) => {
-        e.preventDefault()
-        setopen(!open)
+      e.preventDefault()
+      setopen(!open)
+      const body = document.getElementsByTagName("body")[0]
+      body.style.overflow = !open == true ? "hidden" : "auto"
+    }
+
+    const closeMenu = () => {
+      setopen(false)
+      const body = document.getElementsByTagName("body")[0]
+      body.style.overflow = "auto"
     }
 
     return (
@@ -18,11 +27,9 @@ function Header() {
             <span></span>
           </a>
           <div className={`header__links ${open ? "open" : ""}`}>
-            <a href="#is">.is()</a>
-            <a href="#experience">.experiences()</a>
-            <a href="#works">.works()</a>
-            <a href="#about">.about()</a>
-            <a href="#contact">.contact()</a>
+            {
+              sections.map(s=>(<a key={s} onClick={closeMenu} href={`#${s}`}>{s}()</a>))
+            }
           </div>
         </nav>
       </header>

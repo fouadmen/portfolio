@@ -46,9 +46,10 @@ const IndexPage = () => {
   const [currentCompany, setcurrentCompany] = React.useState(0)
 
   return (
-    <main className="container">
+    <React.Fragment>
       <title>Home Page</title>
       <Header />
+      <main className="container">
       {/* hero */}
       <section className="section hero" id="is">
         <h1>fm<span className="highlight">.is()</span></h1>
@@ -58,12 +59,12 @@ const IndexPage = () => {
       </section>
 
       {/* experiences */}
-      <section className="section section__experiences" id="experience">
+      <section className="section section__experiences" id="experiences">
         <h2>fm<span className="highlight">.experiences()</span></h2>
         <div className="expriences__wrapper">
           <div className="tab">
               {
-                companies.map((c, k)=>(<div onClick={()=>setcurrentCompany(k)} className={`tab__item ${k===currentCompany ? "tab__item__active" : ""}`}>{c.company}</div>))
+                companies.map((c, k)=>(<div key={k} onClick={()=>setcurrentCompany(k)} className={`tab__item ${k===currentCompany ? "tab__item__active" : ""}`}>{c.company}</div>))
               }
           </div>
           <div className="experience">
@@ -71,7 +72,7 @@ const IndexPage = () => {
             <p className="period">{data[currentCompany].period}</p>
             <ul className="tasks">
               {
-                data[currentCompany].tasks.map((t)=>(<li>{t}</li>))
+                data[currentCompany].tasks.map((t)=>(<li key={t}>{t}</li>))
               }
             </ul>
           </div>
@@ -151,6 +152,7 @@ const IndexPage = () => {
         </form>
       </section>
     </main>
+    </React.Fragment>
   )
 }
 
