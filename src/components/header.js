@@ -2,13 +2,13 @@ import React from 'react'
 
 function Header() {
     const [open, setopen] = React.useState(false)
-    const sections = ["is", "experiences","works","about","contact"]
+    const sections = ["is", "experiences","works","about"]
     
     const menuBtnClick = (e) => {
       e.preventDefault()
       setopen(!open)
       const body = document.getElementsByTagName("body")[0]
-      body.style.overflow = !open == true ? "hidden" : "auto"
+      body.style.overflow = !open ? "hidden" : "auto"
     }
 
     const closeMenu = () => {

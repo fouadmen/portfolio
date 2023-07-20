@@ -5,38 +5,49 @@ import Header from '../components/header'
 const IndexPage = () => {
   const data = [
     {
-      id:"dwdw343d33dx3",
-      company : "Funkycorp Ltd",
-      position:"Fullstack Engineer",
-      period : "April 2020 - Present",
-      tasks : [
-        "Improved governmental tourism websites loading speed by an average of 20% by leveraging browser and server caching, optimizing staticfiles and boosting Django server response times.",
+      id: "djk834343867x3",
+      company: "NoCodeJapan Ltd",
+      position: "Software Engineer",
+      period: "December 2021 - Present",
+      tasks: [
+        "Design and implement robust infrastructure solutions to address scalability issues of the multi-tenant SaaS platform, which directly increased profitability of the tenants' applications by an average of 30%.",
+        "Lead and manage an outsourced team of developers, driving improvements in the platform's infrastructure.",
+        "Create a scalable and highly available telemetry system to increase the system's observability."
+      ]
+    },
+    {
+      id: "dwdw343d33dx3",
+      company: "Funkycorp Ltd",
+      position: "Fullstack Engineer",
+      period: "April 2020 - October 2021",
+      tasks: [
+        "Improved governmental tourism websites loading speed by an average of 20% by leveraging browser and server caching, optimizing static files and boosting Django server response times.",
         "Integrated UI designs and constructed solid websites utilizing HTML, CSS, VueJs, and Django within an agile development team, and in close collaboration with designers.",
         "Designed and developed backend automated solutions for CMS operations.",
         "Successfully migrated multiple projects from Ansible to Dockerized structure."
       ]
     },
     {
-      id:"d866w3438673dx3",
-      company : "Passiv Energy Japan",
-      position:"Software Engineer Intern",
-      period : "Septembre 2019 - February 2020",
-      tasks : [
-        "Developed the whole real time and event based system architecture from scratch for air conditioning passive controller.",
-        "Developed a mobile application to control and monitor the air condition in React Native, as well as designing and developing RESTful API with NodeJS on the backend and data modelling.",
+      id: "d866w3438673dx3",
+      company: "Passiv Energy Japan",
+      position: "Software Engineer Intern",
+      period: "September 2019 - February 2020",
+      tasks: [
+        "Developed the whole real-time and event-based system architecture from scratch for air conditioning passive controller.",
+        "Developed a mobile application to control and monitor the air condition in React Native, as well as designing and developing RESTful API with NodeJS on the backend and data modeling.",
         "Optimized ESP32 firmware."
       ]
     },
     {
-      id:"dwvvhjk88733dx3",
-      company : "IBITEK France",
-      position:"Software Engineer Intern",
-      period : "February 2018 - August 2018 | February 2019 - July 2019",
-      tasks : [
+      id: "dwvvhjk88733dx3",
+      company: "IBITEK France",
+      position: "Software Engineer Intern",
+      period: "February 2018 - August 2018 | February 2019 - July 2019",
+      tasks: [
         "Contributed to the development of Sales Management Software's backend and frontend in ASP .Net.",
         "Contributed to the development and deployment of a “Technical Documents” management software.",
         "Meeting with clients for future deployments and to define their needs.",
-        "Deployed the software solutions on the clients' factories in France, Morocco and Algeria."
+        "Deployed the software solutions on the clients' factories in France, Morocco, and Algeria."
       ]
     }
   ]
@@ -47,15 +58,15 @@ const IndexPage = () => {
 
   return (
     <React.Fragment>
-      <title>Home Page</title>
+      <title>FOUAD MANNOU</title>
       <Header />
       <main className="container">
       {/* hero */}
       <section className="section hero" id="is">
         <h1>fm<span className="highlight">.is()</span></h1>
         <h2>Fouad Mannou</h2>
-        <p className="comment">// Passionate Full-stack Developer</p>
-        <p>fm<a href="#contact"><span className="highlight">.contact()</span></a></p>
+        <p className="comment">// Software Engineer ☕️ </p>
+        {/* <p>fm<a href="#contact"><span className="highlight">.contact()</span></a></p> */}
       </section>
 
       {/* experiences */}
@@ -90,8 +101,8 @@ const IndexPage = () => {
           <div className="works__item__content_wrapper">
             <h3 className="project_title">Lesthy</h3>
             <p className="project_description">
-              Lesthy is a platform which will take beauty services in Morocco to a whole new level.
-              Lesthy allows clients and salon owners to seamlessly book and orginize their reservations. 
+            Lesthy is a platform that will take beauty services in Morocco to a whole new level.
+            Lesthy allows clients and salon owners to seamlessly book and organize their reservations. 
             </p>
             <ul className="tech_stack">
               <li>React Native</li>
@@ -115,32 +126,30 @@ const IndexPage = () => {
 
       <section className="section" id="about">
         <h2>fm<span className="highlight">.about()</span></h2>
-        <p className="subtitle">I am a passionate Full-Stack Web & Mobile Developer.</p>
+        <p className="subtitle">Software Engineer.</p>
         <p className="subtitle">From Morocco 🇲🇦 and living in beautiful Tokyo 🇯🇵.</p>
+        <p className="subtitle">Master's Degree in Computer Science.</p>
+        <p className="subtitle">Passionate about problem-solving for robust infrastructures, with experienced in leading teams.</p>
         <h3>Main skills and tools</h3>
         <ul className="skills">
           <li>
             <h4 className="skils__category">Frontend Development</h4>
-            <p>Javascript, CSS, SCSS, Tailwindcss, HTML,React, React Native, Next Js, Vue Js, Nuxt Js, Webpack</p>
+            <p>Javascript, CSS, SCSS, Tailwindcss, HTML,React, React Native, Next Js, Vue Js, Nuxt Js</p>
           </li>
           <li>
             <h4>Backend Development</h4>
-            <p>Django, Django-CMS, NodeJs, ASP .Net</p>
+            <p>Django, NodeJs, ASP .Net</p>
           </li>
           <li>
             <h4>Infrastructure</h4>
-            <p>AWS (EC2, S3, ECR, ECS), DigitalOcean, Heroku</p>
-          </li>
-          <li>
-            <h4>Other</h4>
-            <p>Contentful API, Cloudinary, Algolia, Figma, Adobe XD</p>
+            <p>AWS, DigitalOcean, Heroku, Postgresql, Elasticsearch, Opentelemetry</p>
           </li>
         </ul>
       </section>
 
 
       {/* contact */}
-      <section className="section" id="contact">
+      {/* <section className="section" id="contact">
         <h2>fm<span className="highlight">.contact()</span></h2>
         <p className="subtitle">Let's get in touch !</p>
         <form>
@@ -150,7 +159,7 @@ const IndexPage = () => {
           <textarea type="text"  name="message" id="message" placeholder="Message"/>
           <input type="submit" name="submit" id="submit" value="Send()"/>
         </form>
-      </section>
+      </section> */}
     </main>
     </React.Fragment>
   )
