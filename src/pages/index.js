@@ -1,6 +1,8 @@
 import * as React from "react"
 import "../styles/styles.scss"
 import Header from '../components/header'
+import linkedin from "../images/linkedin.png"
+import github from "../images/github.png"
 
 const IndexPage = () => {
   const data = [
@@ -66,7 +68,7 @@ const IndexPage = () => {
         <h1>fm<span className="highlight">.is()</span></h1>
         <h2>Fouad Mannou</h2>
         <p className="comment">// Software Engineer ☕️ </p>
-        {/* <p>fm<a href="#contact"><span className="highlight">.contact()</span></a></p> */}
+        <p>fm<a href="#contact"><span className="highlight">.contact()</span></a></p>
       </section>
 
       {/* experiences */}
@@ -149,17 +151,14 @@ const IndexPage = () => {
 
 
       {/* contact */}
-      {/* <section className="section" id="contact">
+      <section className="section" id="contact">
         <h2>fm<span className="highlight">.contact()</span></h2>
         <p className="subtitle">Let's get in touch !</p>
-        <form>
-          <input type="text" name="name" id="name" placeholder="Name"/>
-          <input type="text" name="email" id="email" placeholder="Email"/>
-          <input type="text" name="subject" id="subject" placeholder="Subject"/>
-          <textarea type="text"  name="message" id="message" placeholder="Message"/>
-          <input type="submit" name="submit" id="submit" value="Send()"/>
-        </form>
-      </section> */}
+        <div className="contact-links">
+          <a className="contact-link" href="https://www.linkedin.com/in/fouad-mannou"><img src={linkedin} alt="linkedin link"/></a>
+          <a className="contact-link" href="https://github.com/fouadmen"><img src={github} alt="github profile"/></a>
+        </div>
+      </section>
     </main>
     </React.Fragment>
   )

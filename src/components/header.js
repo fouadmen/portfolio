@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
     const [open, setopen] = React.useState(false)
-    const sections = ["is", "experiences","works","about"]
+    const sections = ["is", "experiences","works","about","contact"]
     
     const menuBtnClick = (e) => {
       e.preventDefault()
