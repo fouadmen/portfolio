@@ -131,7 +131,7 @@ const IndexPage = () => {
         <p className="subtitle">Software Engineer.</p>
         <p className="subtitle">From Morocco 🇲🇦 and living in beautiful Tokyo 🇯🇵.</p>
         <p className="subtitle">Master's Degree in Computer Science.</p>
-        <p className="subtitle">Passionate about problem-solving for robust infrastructures, with experienced in leading teams.</p>
+        <p className="subtitle">Passionate about problem-solving for robust infrastructures, with experience in leading teams.</p>
         <h3>Main skills and tools</h3>
         <ul className="skills">
           <li>
